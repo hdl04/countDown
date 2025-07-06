@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  font-family: "Monstserrat", sans-serif;
+  color: #404040;
+  background-color: #800000;
+}
+
+.doisPontos {
+  font-size: 48px;
+  font-family: "Monstserrat", sans-serif;
+  color: black;
+}
+
+.secaoPrincipal {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.central {
+  position: relative;
+  background-color: white;
+  border-radius: 3rem;
+  width: 50rem;
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 0.8rem 0.5rem rgba(0, 0, 0, 0.225);
+}
+
+#titulo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(33%, -50%) rotate(-2deg);
+  background-color: #a32626;
+  color: #ffffff;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.316);
+  font-weight: 600;
+  font-size: 3.2rem;
+  border-radius: 1rem;
+  padding: 0.7rem 3rem;
+  font-family: "Poppins", sans-serif;
+}
+
+#meses,
+#dias,
+#horas,
+#minutos,
+#segundos {
+  position: relative;
+}
+
+#spanMeses,
+#spanDias {
+  position: absolute;
+  left: 0;
+  transform: translate(75%, 245%);
+  color: #1a1a1a;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#spanHoras {
+  position: absolute;
+  left: 0;
+  transform: translate(45%, 245%);
+  color: #1a1a1a;
+}
+
+#spanMinutos {
+  position: absolute;
+  left: 0;
+  transform: translate(22%, 245%);
+  color: #1a1a1a;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#spanSegundos {
+  position: absolute;
+  left: 0;
+  transform: translate(5%, 245%);
+  color: #1a1a1a;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.padraoEstiloExterno {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.padraoEstiloInterno {
+  font-size: 5.2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #1a1a1a;
+  background-color: #e6e6e6;
+  border-radius: 0.5rem;
+  width: fit-content;
+  padding: 0 0.5rem;
+  box-shadow: inset 0 0.2rem 0.6rem rgba(0, 0, 0, 0.15);
+}
