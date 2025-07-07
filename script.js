@@ -22,7 +22,7 @@ function atualizarContador() {
   const agora = new Date();
 
   // Data alvo: 29/08/2025 às 02:55
-  const dataAlvo = new Date(2025, 7, 29, 2, 55, 0); // Mês 7 = Agosto (0-based)
+  const dataAlvo = new Date(2025, 7, 28, 2, 55, 0); // Mês 7 = Agosto (0-based)
 
   const diffMs = dataAlvo - agora;
 
