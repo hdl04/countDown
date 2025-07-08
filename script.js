@@ -21,8 +21,8 @@ function setDoisDigitos(el1, el2, valor) {
 function atualizarContador() {
   const agora = new Date();
 
-  // Data alvo: 29/08/2025 às 02:55
-  const dataAlvo = new Date(2025, 7, 28, 2, 55, 0); // Mês 7 = Agosto (0-based)
+  // Data alvo: 28/08/2025 às 02:55
+  const dataAlvo = new Date(2025, 7, 27, 2, 55, 0); // Agosto = 7 (zero-based)
 
   const diffMs = dataAlvo - agora;
 
@@ -36,38 +36,15 @@ function atualizarContador() {
     return;
   }
 
-  // Calcular diferença dos Meses, Dias, Horas, Minutos e Segundos
   const totalSegundos = Math.floor(diffMs / 1000);
   const segundos = totalSegundos % 60;
   const minutos = Math.floor(totalSegundos / 60) % 60;
   const horas = Math.floor(totalSegundos / 3600) % 24;
+  const dias = Math.floor(totalSegundos / 86400);
 
-  // Para calcular dias e meses de forma precisa:
-  const atual = new Date(
-    agora.getFullYear(),
-    agora.getMonth(),
-    agora.getDate()
-  );
-  const alvo = new Date(
-    dataAlvo.getFullYear(),
-    dataAlvo.getMonth(),
-    dataAlvo.getDate()
-  );
+  const diffMeses = Math.floor(dias / 30);
+  const diasRestantes = dias % 30;
 
-  let diffDiasTotais = Math.floor((alvo - atual) / (1000 * 60 * 60 * 24));
-  let diffMeses =
-    dataAlvo.getMonth() -
-    agora.getMonth() +
-    12 * (dataAlvo.getFullYear() - agora.getFullYear());
-
-  // Corrige caso o dia do mês atual ainda não tenha sido atingido
-  if (agora.getDate() > dataAlvo.getDate()) {
-    diffMeses -= 1;
-  }
-
-  const diasRestantes = diffDiasTotais - diffMeses * 30;
-
-  // Atualiza HTML
   setDoisDigitos(mes1, mes2, diffMeses);
   setDoisDigitos(dia1, dia2, diasRestantes);
   setDoisDigitos(hora1, hora2, horas);
