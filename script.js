@@ -10,19 +10,16 @@ const minuto2 = document.getElementById("minuto2");
 const segundo1 = document.getElementById("segundo1");
 const segundo2 = document.getElementById("segundo2");
 
-// Função auxiliar para preencher dois dígitos
 function setDoisDigitos(el1, el2, valor) {
   const str = valor.toString().padStart(2, "0");
   el1.innerText = str[0];
   el2.innerText = str[1];
 }
 
-// Função principal
 function atualizarContador() {
   const agora = new Date();
 
-  // Data alvo: 28/08/2025 às 02:55
-  const dataAlvo = new Date(2025, 7, 27, 2, 55, 0); // Agosto = 7 (zero-based)
+  const dataAlvo = new Date(2025, 7, 27, 2, 55, 0);
 
   const diffMs = dataAlvo - agora;
 
